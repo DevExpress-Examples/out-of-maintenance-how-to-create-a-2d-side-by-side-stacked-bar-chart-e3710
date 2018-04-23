@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="SideBySideStackedBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" >
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxc:ChartControl Name="chartControl1" VerticalAlignment="Top">
+            <dxc:ChartControl.Diagram>
+                <dxc:XYDiagram2D>
+                    <dxc:XYDiagram2D.Series>
+                        <dxc:BarSideBySideStackedSeries2D DisplayName="First Series" StackedGroup="1" BarWidth="0.5">
+                            <!--region #Model-->
+                            <dxc:BarSideBySideStackedSeries2D.Model>
+                                <dxc:Quasi3DBar2DModel />
+                            </dxc:BarSideBySideStackedSeries2D.Model>
+                            <!--endregion #Model-->
+                            <dxc:BarSideBySideStackedSeries2D.Points>
+                                <dxc:SeriesPoint Argument="A" Value="1" />
+                                <dxc:SeriesPoint Argument="B" Value="2" />
+                            </dxc:BarSideBySideStackedSeries2D.Points>
+                        </dxc:BarSideBySideStackedSeries2D>
+                        <dxc:BarSideBySideStackedSeries2D DisplayName="Second Series" StackedGroup="1" BarWidth="0.5">
+                            <!--region #Model2-->
+                            <dxc:BarSideBySideStackedSeries2D.Model>
+                                <dxc:Quasi3DBar2DModel />
+                            </dxc:BarSideBySideStackedSeries2D.Model>
+                            <!--endregion #Model2-->
+                            <dxc:BarSideBySideStackedSeries2D.Points>
+                                <dxc:SeriesPoint Argument="A" Value="4" />
+                                <dxc:SeriesPoint Argument="B" Value="3" />
+                            </dxc:BarSideBySideStackedSeries2D.Points>
+                        </dxc:BarSideBySideStackedSeries2D>
+                        <dxc:BarSideBySideStackedSeries2D DisplayName="Third Series" StackedGroup="2" BarWidth="0.5">
+                            <!--region #Model3-->
+                            <dxc:BarSideBySideStackedSeries2D.Model>
+                                <dxc:Quasi3DBar2DModel />
+                            </dxc:BarSideBySideStackedSeries2D.Model>
+                            <!--endregion #Model3-->
+                            <dxc:BarSideBySideStackedSeries2D.Points>
+                                <dxc:SeriesPoint Argument="A" Value="5" />
+                                <dxc:SeriesPoint Argument="B" Value="6" />
+                            </dxc:BarSideBySideStackedSeries2D.Points>
+                        </dxc:BarSideBySideStackedSeries2D>
+                        <dxc:BarSideBySideStackedSeries2D DisplayName="Fourth Series" StackedGroup="2" BarWidth="0.5">
+                            <!--region #Model4-->
+                            <dxc:BarSideBySideStackedSeries2D.Model>
+                                <dxc:Quasi3DBar2DModel />
+                            </dxc:BarSideBySideStackedSeries2D.Model>
+                            <!--endregion #Model4-->
+                            <dxc:BarSideBySideStackedSeries2D.Points>
+                                <dxc:SeriesPoint Argument="A" Value="2" />
+                                <dxc:SeriesPoint Argument="B" Value="3" />
+                            </dxc:BarSideBySideStackedSeries2D.Points>
+                        </dxc:BarSideBySideStackedSeries2D>
+                    </dxc:XYDiagram2D.Series>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl.Diagram>
+        </dxc:ChartControl>
+    </Grid>
+</UserControl>
